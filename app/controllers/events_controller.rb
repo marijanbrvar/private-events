@@ -18,15 +18,12 @@ class EventsController < ApplicationController
     end
   end
 
-  def edit
-  end
-
   def create
     user = User.find(session[:current_user]['id'])
     @event = user.events.build(event_params)
 
     if @event.save
-      puts 'aaa'
+      redirect_to events_path
     else
       render :new
     end
