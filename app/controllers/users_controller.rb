@@ -36,7 +36,7 @@ class UsersController < ApplicationController
   end
 
   def sign_out
-    session[:current_user] = nil
+    reset_session
     redirect_to sign_in_path
   end
 
