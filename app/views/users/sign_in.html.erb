@@ -1,9 +1,1 @@
-<h1>Sign In</h1>
-
-<%= form_with model: @user do |f|%>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-    <%= f.submit %>
-<% end %>
-
-<%= link_to 'Sign Up', new_user_path%>
+<%= render 'form', model: :user, title: "Welcome, again!", tagline: 'Sign In', btnlbl: 'Sign In'%>

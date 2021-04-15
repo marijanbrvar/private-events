@@ -1,7 +1,1 @@
-<section class="container">
-<h1 class="h5">Sign Up</h1>
-<%= simple_form_for @user do |f| %>
-    <%= f.input :name %>
-    <%= f.submit 'Sign Up', class: 'btn btn-success' %>
-<% end %>
-</section>
+<%= render 'form', model: @user, title: "Sign Up", tagline: 'Please signup as new user and create your event!', btnlbl: 'Sign Up' %>
