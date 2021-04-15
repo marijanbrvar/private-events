@@ -4,6 +4,7 @@
   <div class="container-fluid">
         <%= link_to 'Private Events', root_path, class: 'navbar-brand' %>
          <% if session[:current_user] %>
+         <p>Welcome, <%= session[:current_user]['name'].capitalize %></p>
           <%= link_to 'Sign Out', sign_out_path, class: 'btn btn-link' %>
         <% else %>
                   <%= link_to 'Sign In', sign_in_path, class: 'btn btn-link' %>
