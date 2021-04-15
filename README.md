@@ -2,44 +2,29 @@
 
 # Private events
 
-> We are building the site similar to a private Eventbrite which allows users to create events and then manage user signups. Users can create events and send invitations and parties. Events take place at a specific date and at a location.  A user can create events. A user can attend many events. An event can be attended by many users. This will require you to model many-to-many relationships.
+> We are building a site similar to a private Eventbrite that allows users to create events and manage user signups. Users can create and attend events. Events take place at a specific date and a location.  A user can create events. A user can participate in many events. Many users can attend an event. This will require you to model many-to-many relationships.
 
 ![screenshot](./app_screenshot.png)
 
-Additional description about the project and its features.
+Additional description of the project and its features.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
-
-## Live Demo
-
-[Live Demo Link](https://livedemo.com)
-
-
-## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
+- Ruby
+- Ruby on Rails
 
 ### Setup
 
-### Install
+- To use the application, please clone the repository to your local computer `git clone git@github.com:marijanbrvar/private-events.git` then cd to directory `cd private events
+- Use `bundler` to receive gems required for this project
+- Run `rails db:setup` to create the database, run migration files, and install some sample data
+- Activate your rails server by running the command `rails s`
+
 
 ### Usage
-
-### Run tests
-
-### Deployment
-
-
+- Open the application in your browser. Usually, it is at `http://localhost:3000/`
+- Sign up for a new user account and create a new event
+- to check existing data, click on the 'SHOW' link at the first event.
 
 ## AUTHOR
 
@@ -70,7 +55,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
+- Hat tip to anyone who's code was used
 - Inspiration
 - etc
 
