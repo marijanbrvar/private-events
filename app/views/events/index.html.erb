@@ -21,14 +21,12 @@
         <td><%= event.description %></td>
         <td><%= event.date %></td>
         <td><%= event.location %></td>
-        <td><%= event.creator %></td>
+        <td><%= event.creator.name %></td>
         <td><%= link_to 'Show', event %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 <br>
-
-<%= session.inspect %>
 
 
