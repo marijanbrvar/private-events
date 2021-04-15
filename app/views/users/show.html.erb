@@ -1,28 +1,60 @@
-<h1 class="h5"><%= @user.name.capitalize %>'s Created Events</h1>
-
-<% @user.events.each do |e| %>
-    <%= e.name %>
-    <%= e.description %>
-    <%= e.date %>
-    <%= e.location %>
-<% end %>
-
-<%= link_to 'Create Event', new_event_path %>
-
-<h1 class="h5">Previous Events</h1>
-
-<% @user.attended_events.previous_events.each do |e| %>
-    <%= e.name %>
-    <%= e.description %>
-    <%= e.date %>
-    <%= e.location %>
-<% end %>
-
-<h1 class="h5">Upcoming Events</h1>
-
-<% @user.attended_events.upcoming_events.each do |e| %>
-    <%= e.name %>
-    <%= e.description %>
-    <%= e.date %>
-    <%= e.location %>
-<% end %>
+<section  class="container">
+    <div class="row mt-5 align-items-center">
+        <div class="col col-md-6">
+          <h1 class="h3"><%= @user.name.capitalize %>'s Created Events</h1>
+        </div>
+        <div class="col-2">
+          <%= link_to 'Create Event', new_event_path, class: 'text-decoration-none float-end' %>
+        </div>
+      </div>
+    <div class="row justify-content-start">
+        <h6 class="mt-2">Created events</h6>
+        <div class="col col-md-8">
+            <ol class="list-group list-group-numbered">
+                <% @user.events.each do |e| %>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold"><%= e.name %></div>
+                    <%= e.description %>
+                    <%= e.date %>
+                    <%= e.location %>
+                </div>
+                <span class="badge bg-primary rounded-pill">14</span>
+                </li>
+                <% end %>
+            </ol>
+        </div>
+        <h6 class="mt-2">Previous Events</h6>
+        <div class="col col-md-8">
+            <ol class="list-group list-group-numbered">
+                <% @user.attended_events.previous_events.each do |e| %>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold"><%= e.name %></div>
+                    <%= e.description %>
+                    <%= e.date %>
+                    <%= e.location %>
+                </div>
+                <span class="badge bg-primary rounded-pill">14</span>
+                </li>
+                <% end %>
+            </ol>
+        </div>
+        <h6 class="mt-2">Upcoming Events</h6>
+        <div class="col col-md-8">
+            <ol class="list-group list-group-numbered">
+                <% @user.attended_events.upcoming_events.each do |e| %>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold"><%= e.name %></div>
+                    <%= e.description %>
+                    <%= e.date %>
+                    <%= e.location %>
+                </div>
+                <span class="badge bg-primary rounded-pill">14</span>
+                </li>
+                <% end %>
+            </ol>
+        </div>
+    </div>
+</section>
