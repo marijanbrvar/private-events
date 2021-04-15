@@ -38,7 +38,7 @@ class UsersController < ApplicationController
   end
 
   def sign_in
-    redirect_to sign_in_path if session[:current_user]
+    redirect_to events_path if session[:current_user]
   end
 
   def sign_out
