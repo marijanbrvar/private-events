@@ -53,12 +53,6 @@ Feel free to check the [issues page](https://github.com/marijanbrvar/private-eve
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
-
-- Hat tip to anyone who's code was used
-- Inspiration
-- etc
-
 ## 📝 License
 
 - This project is [MIT](https://github.com/marijanbrvar/private-events/blob/development/LICENSE) licensed.
