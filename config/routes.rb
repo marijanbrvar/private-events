@@ -6,9 +6,3 @@ Rails.application.routes.draw do
   resources :events, only: [:index, :new, :create, :show]
   resources :users, only: [:new, :create, :show]
 end
-
-
-# resources :events, only: [:index, :show]
-#   resources :users, only: [:new, :create, :show] do
-#     resources :events, only: [:new, :create]
-#   end

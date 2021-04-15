@@ -5,7 +5,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Welcome, again!</h5>
                     <h6 class="card-subtitle mb-2 text-muted">Sign In</h6>
-                    <%= form_with model: @user, class: "login-form" do |f| %>
+                    <%= form_with model: @user do |f|%>
                     <p class="card-text">
                     <%= f.label :username, class:"form-label" %>
                     <%= f.text_field :username, class: "form-control" %>
@@ -18,3 +18,4 @@
         </div>
     </div>
 </section>
+
