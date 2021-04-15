@@ -45,5 +45,4 @@ class UsersController < ApplicationController
     reset_session
     redirect_to sign_in_path
   end
-
 end
