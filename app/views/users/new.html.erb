@@ -1,2 +1,7 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<section class="container">
+<h1 class="h5">Sign Up</h1>
+<%= simple_form_for @user do |f| %>
+    <%= f.input :name %>
+    <%= f.submit 'Sign Up', class: 'btn btn-success' %>
+<% end %>
+</section>

@@ -21,4 +21,23 @@ class UsersController < ApplicationController
   def show
   end
 
+  def new_sign_in
+    @user = User.find_by(name: params[:name])
+    if @user
+      current_user(@user.id)
+      redirect_to root_path
+    else
+      redirect_to sign_in_path, notice: 'Please Sign In'
+    end
+  end
+
+  def sign_in
+    redirect_to sign_in_path if session[:current_user]
+  end
+
+  def sign_out
+    session[:current_user] = nil
+    redirect_to sign_in_path
+  end
+
 end
