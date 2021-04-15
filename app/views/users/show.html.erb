@@ -9,7 +9,7 @@
 
 <%= link_to 'Create Event', new_event_path %>
 
-<h1 class="h5">Past Events</h1>
+<h1 class="h5">Previous Events</h1>
 
 <% @user.attended_events.previous_events.each do |e| %>
     <%= e.name %>
@@ -18,7 +18,7 @@
     <%= e.location %>
 <% end %>
 
-<h1 class="h5">Past Events</h1>
+<h1 class="h5">Upcoming Events</h1>
 
 <% @user.attended_events.upcoming_events.each do |e| %>
     <%= e.name %>

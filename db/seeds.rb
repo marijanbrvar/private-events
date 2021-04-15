@@ -17,11 +17,22 @@ Event.create!(name: Faker::Artist.name, creator: user, location: Faker::Address.
   date: Faker::Date.forward(days: 123), 
   description: Faker::Lorem.paragraph(sentence_count: 4))
 
-10.times do |i|
+5.times do |i|
   user = User.create!(name: "#{Faker::Artist.name}_#{i}")
   p user.name
   Event.create!(name: Faker::Artist.name, creator: user, location: Faker::Address.full_address, 
     date: Faker::Date.forward(days: 123), 
+    description: Faker::Lorem.paragraph(sentence_count: 4))
+  e = Event.find(1)
+  e.attendees << user
+  e.save
+end
+
+3.times do |i|
+  user = User.create!(name: "#{Faker::Artist.name}_#{i}")
+  p user.name
+  Event.create!(name: Faker::Artist.name, creator: user, location: Faker::Address.full_address, 
+    date: Faker::Date.backward(days: 123), 
     description: Faker::Lorem.paragraph(sentence_count: 4))
 end
 
