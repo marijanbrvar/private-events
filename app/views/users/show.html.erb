@@ -1,2 +1,28 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<h1 class="h5"><%= @user.name.capitalize %>'s Created Events</h1>
+
+<% @user.events.each do |e| %>
+    <%= e.name %>
+    <%= e.description %>
+    <%= e.date %>
+    <%= e.location %>
+<% end %>
+
+<%= link_to 'Create Event', new_event_path %>
+
+<h1 class="h5">Past Events</h1>
+
+<% @user.attended_events.previous_events.each do |e| %>
+    <%= e.name %>
+    <%= e.description %>
+    <%= e.date %>
+    <%= e.location %>
+<% end %>
+
+<h1 class="h5">Past Events</h1>
+
+<% @user.attended_events.upcoming_events.each do |e| %>
+    <%= e.name %>
+    <%= e.description %>
+    <%= e.date %>
+    <%= e.location %>
+<% end %>

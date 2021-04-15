@@ -20,6 +20,11 @@ class UsersController < ApplicationController
   end
 
   def show
+    if session[:current_user]
+      @user = User.find(params[:id])
+    else
+      redirect_to sign_in_path
+    end
   end
 
   def new_sign_in
