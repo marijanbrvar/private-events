@@ -17,6 +17,7 @@ Additional description of the project and its features.
 
 - To use the application, please clone the repository to your local computer `git clone git@github.com:marijanbrvar/private-events.git` then cd to directory `cd private events
 - Use `bundle install` to receive gems required for this project
+- Use `yarn` to receive all the JavaScript packages for this project
 - Run `rails db:setup` to create the database, run migration files, and install some sample data
 - Activate your rails server by running the command `rails s`
 
