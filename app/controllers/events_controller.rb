@@ -37,5 +37,4 @@ class EventsController < ApplicationController
     event.attendees << user unless event.attendees.include? user
     redirect_to event_path(params[:id])
   end
-
 end
