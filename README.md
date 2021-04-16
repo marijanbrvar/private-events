@@ -22,11 +22,8 @@ Additional description of the project and its features.
 - Activate your rails server by running the command `rails s`
 
 ### Tests
-For testing we used 'RSpec-rails'. Use the following commands to execute tests for Models, Routes and Requests.
-- to test models: `rspec spec/test_models.rb`
-- to test requests: `rspec spec/test_requests.rb`
-- to test routes: `rspec spec/test_routes.rb`
-
+For testing we used 'RSpec-rails'. Use prepared tests for Models, Routes and Requests.
+- to run tests, type: `rspec`
 
 ### Usage
 - Open the application in your browser. Usually, it is at `http://localhost:3000/`
