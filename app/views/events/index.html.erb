@@ -1,0 +1,40 @@
+<section class="container">
+<div class="row mt-5 align-items-center">
+  <div class="col">
+    <h1 class="h3">Events</h1>
+  </div>
+  <div class="col-2">
+    <%= link_to 'Create Event', new_event_path , class: 'text-decoration-none float-end' %>
+  </div>
+</div>
+<h5 class="mt-3 ">Upcoming Events</h5>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <% @upcoming_events.each do |event| %>
+  <div class="col">
+    <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"><%= event.name %></h5>
+          <h6 class="card-subtitle mb-2 text-muted"><%= event.description %></h6>
+          <p class="card-text"><strong>Date:</strong> <%= event.date %> | <strong>Loc.:</strong> <%= event.location %> |<strong> Organizer:</strong> <%= event.creator.name.capitalize %></p>
+          <div><%= link_to 'Show', event, class: 'text-decoration-none float-end' %></div>
+        </div>
+    </div>
+  </div>
+    <% end %>
+</div>
+<h5 class="mt-5 ">Previous Events</h5>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <% @previous_events.each do |event| %>
+  <div class="col">
+    <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"><%= event.name %></h5>
+          <h6 class="card-subtitle mb-2 text-muted"><%= event.description %></h6>
+          <p class="card-text"><strong>Date:</strong> <%= event.date %> | <strong>Loc.:</strong> <%= event.location %> |<strong> Organizer:</strong> <%= event.creator.name.capitalize %></p>
+          <div><%= link_to 'Show', event, class: 'text-decoration-none float-end' %></div>
+        </div>
+    </div>
+  </div>
+    <% end %>
+</div>
+</section>

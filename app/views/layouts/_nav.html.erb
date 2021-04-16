@@ -1,0 +1,16 @@
+<nav class="navbar navbar-light bg-light">
+    <div class="container">
+        <%= link_to 'Private Events', root_path, class: 'navbar-brand' %>
+        <% if session[:current_user] %>
+        <div class="d-flex">
+        <%= link_to "Hi, #{session[:current_user]['name'].capitalize}", user_path(session[:current_user]['id']), class: 'btn btn-link text-decoration-none' %>
+        <%= link_to 'Sign Out', sign_out_path, class: 'btn btn-link text-decoration-none' %>
+        </div>
+        <% else %>
+        <div class="d-flex">
+        <%= link_to 'Sign In', sign_in_path, class: 'btn btn-link text-decoration-none' %>
+        <%= link_to 'Sign Up', new_user_path, class: 'btn btn-link text-decoration-none' %>
+        </div>
+        <% end %>
+    </div>
+</nav>

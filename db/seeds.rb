@@ -5,3 +5,34 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+User.destroy_all
+Event.destroy_all
+Attendance.destroy_all
+
+user = User.create!(name: 'zil')
+p user.name
+Event.create!(name: Faker::Artist.name, creator: user, location: Faker::Address.full_address, 
+  date: Faker::Date.forward(days: 123), 
+  description: Faker::Lorem.paragraph(sentence_count: 4))
+
+5.times do |i|
+  user = User.create!(name: "#{Faker::Artist.name}_#{i}")
+  p user.name
+  Event.create!(name: Faker::Artist.name, creator: user, location: Faker::Address.full_address, 
+    date: Faker::Date.forward(days: 123), 
+    description: Faker::Lorem.paragraph(sentence_count: 4))
+  e = Event.find(1)
+  e.attendees << user
+  e.save
+end
+
+3.times do |i|
+  user = User.create!(name: "#{Faker::Artist.name}_#{i}")
+  p user.name
+  Event.create!(name: Faker::Artist.name, creator: user, location: Faker::Address.full_address, 
+    date: Faker::Date.backward(days: 123), 
+    description: Faker::Lorem.paragraph(sentence_count: 4))
+end
+

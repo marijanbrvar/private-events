@@ -1,0 +1,40 @@
+
+
+<section class="container mt-5">
+ <div class="my-3">
+  <%= link_to 'Back', events_path, class: 'text-decoration-none' %>
+  <%= link_to 'Attend', attend_path, class: 'btn btn-primary btn-sm float-end' unless @is_previous_event %>
+
+ </div>
+ <div class="row">
+   <div class="col col-md-6">
+    <dl class="row">
+      <dt class="col-sm-3">Name:</dt>
+      <dd class="col-sm-9"><%= @event.name %> - <%= @event.id%></dd>
+    
+      <dt class="col-sm-3">Description:</dt>
+      <dd class="col-sm-9">
+        <p><%= @event.description %></p>
+      </dd>
+    
+      <dt class="col-sm-3">Date:</dt>
+      <dd class="col-sm-9"><%= @event.date %></dd>
+    
+      <dt class="col-sm-3">Location:</dt>
+      <dd class="col-sm-9"><%= @event.location %></dd>
+      
+      <dt class="col-sm-3">Creator:</dt>
+      <dd class="col-sm-9"><%= @event.creator.name %></dd>
+    </dl>
+   </div>
+   <div class="col col-md-6">
+    <strong>Attendees:</strong>
+    <ul class="list-group">
+      <% @event.attendees.each do |a| %>
+      <li class="list-group-item"><%= a.name %></li>
+      <% end %>
+    </ul>
+   </div>
+ </div>
+  
+</section>

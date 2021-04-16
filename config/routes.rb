@@ -1,3 +1,9 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  root "events#index"
+  get '/sign_in', to: 'users#sign_in'
+  post '/sign_in', to: 'users#new_sign_in'
+  get '/sign_out', to: 'users#sign_out'
+  get 'events/:id/attend', to: 'events#add_attendee', as: 'attend'
+  resources :events, only: [:index, :new, :create, :show, :add_attendee]
+  resources :users, only: [:new, :create, :show]
 end
