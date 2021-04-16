@@ -3,7 +3,8 @@ class EventsController < ApplicationController
   include UsersHelper
 
   def index
-    @events = Event.all
+    @previous_events = Event.previous_events
+    @upcoming_events = Event.upcoming_events
   end
 
   def show

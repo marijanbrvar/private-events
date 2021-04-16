@@ -3,7 +3,7 @@
 <section class="container mt-5">
  <div class="my-3">
   <%= link_to 'Back', events_path, class: 'text-decoration-none' %>
-  <%= link_to 'Attend', attend_path, class: 'text-decoration-none' %>
+  <%= link_to 'Attend', attend_path, class: 'btn btn-primary btn-sm float-end' %>
 
  </div>
  <div class="row">
@@ -27,7 +27,7 @@
       <dd class="col-sm-9"><%= @event.creator.name %></dd>
     </dl>
    </div>
-   <div class="col col-md-4">
+   <div class="col col-md-6">
     <strong>Attendees:</strong>
     <ul class="list-group">
       <% @event.attendees.each do |a| %>

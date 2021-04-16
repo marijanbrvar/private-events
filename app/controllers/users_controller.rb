@@ -22,6 +22,9 @@ class UsersController < ApplicationController
   def show
     if session[:current_user]
       @user = User.find(params[:id])
+      @created_events = current_user_now.events
+      @previous_events = current_user_now.attended_events.previous_events
+      @upcoming_events = current_user_now.attended_events.upcoming_events
     else
       redirect_to sign_in_path
     end
