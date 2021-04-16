@@ -20,6 +20,12 @@ Additional description of the project and its features.
 - Run `rails db:setup` to create the database, run migration files, and install some sample data
 - Activate your rails server by running the command `rails s`
 
+### Tests
+For testing we used 'RSpec-rails'. Use the following commands to execute tests for Models, Routes and Requests.
+- to test models: `rspec spec/test_models.rb`
+- to test requests: `rspec spec/test_requests.rb`
+- to test routes: `rspec spec/test_routes.rb`
+
 
 ### Usage
 - Open the application in your browser. Usually, it is at `http://localhost:3000/`
@@ -28,7 +34,7 @@ Additional description of the project and its features.
 
 ## AUTHOR
 
-**Zil Norvilis**
+**ZIL NORVILIS**
 
 - Github: [![](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/zilton7)
 - Linkedin: [![](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/zil-norvilis/)
