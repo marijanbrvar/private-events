@@ -3,7 +3,7 @@
 <section class="container mt-5">
  <div class="my-3">
   <%= link_to 'Back', events_path, class: 'text-decoration-none' %>
-  <%= link_to 'Attend', attend_path, class: 'btn btn-primary btn-sm float-end' %>
+  <%= link_to 'Attend', attend_path, class: 'btn btn-primary btn-sm float-end' unless @is_previous_event %>
 
  </div>
  <div class="row">

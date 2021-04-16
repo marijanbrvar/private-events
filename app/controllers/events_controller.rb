@@ -9,6 +9,7 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
+    @is_previous_event = Event.previous_events.include? @event
   end
 
   def new
@@ -36,4 +37,5 @@ class EventsController < ApplicationController
     event.attendees << user unless event.attendees.include? user
     redirect_to event_path(params[:id])
   end
+
 end
