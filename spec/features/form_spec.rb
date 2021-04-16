@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "Forms", type: :feature do
+RSpec.feature 'Forms', type: :feature do
   it 'enters the name and receives greeting' do
     visit 'sign_in'
     fill_in :name, with: 'zil'
