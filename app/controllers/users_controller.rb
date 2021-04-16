@@ -38,7 +38,15 @@ class UsersController < ApplicationController
   end
 
   def sign_in
-    redirect_to events_path if session[:current_user]
+    @user = User.find_by(name: params[:name])
+    if @user
+      @user = User.find_by(name: params[:name])
+      p @user
+      current_user(@user.id)
+      redirect_to events_path
+    else
+      render :sign_in
+    end
   end
 
   def sign_out
